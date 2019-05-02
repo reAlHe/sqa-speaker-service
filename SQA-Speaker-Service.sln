@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQASpeakerService", "SQASpeakerService\SQASpeakerService.csproj", "{FCBB6753-2EEC-48C2-9009-2DC2F937F58A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQASpeakerService.Test", "SQASpeakerService.Test\SQASpeakerService.Test.csproj", "{A2484950-FA48-48FB-9D38-835DC49DD0F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQASpeakerService.ProviderTest", "SQASpeakerService.ProviderTest\SQASpeakerService.ProviderTest.csproj", "{E216F99B-7E82-49EA-9929-E67CDAFFF9A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCBB6753-2EEC-48C2-9009-2DC2F937F58A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCBB6753-2EEC-48C2-9009-2DC2F937F58A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCBB6753-2EEC-48C2-9009-2DC2F937F58A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCBB6753-2EEC-48C2-9009-2DC2F937F58A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2484950-FA48-48FB-9D38-835DC49DD0F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2484950-FA48-48FB-9D38-835DC49DD0F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2484950-FA48-48FB-9D38-835DC49DD0F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2484950-FA48-48FB-9D38-835DC49DD0F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E216F99B-7E82-49EA-9929-E67CDAFFF9A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E216F99B-7E82-49EA-9929-E67CDAFFF9A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E216F99B-7E82-49EA-9929-E67CDAFFF9A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E216F99B-7E82-49EA-9929-E67CDAFFF9A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
