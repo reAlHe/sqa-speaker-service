@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Nancy;
 using SQASpeakerService.Service;
 
@@ -20,13 +21,9 @@ namespace SQASpeakerService.Api
             });
         }
 
-        private static IEnumerable<string> SplitIds(string ids)
+        private static IEnumerable<int> SplitIds(string ids)
         {
-            if (string.IsNullOrEmpty(ids))
-            {
-                return new List<string>();
-            }
-            return ids.Split(",");
+            return string.IsNullOrEmpty(ids) ? new List<int>() : ids.Split(",").Select(int.Parse).ToList();
         }
     }
 }

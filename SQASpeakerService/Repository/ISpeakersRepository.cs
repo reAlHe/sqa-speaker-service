@@ -5,6 +5,6 @@ namespace SQASpeakerService.Repository
 {
     public interface ISpeakersRepository
     {
-        IEnumerable<Speaker> GetSpeakersById(IEnumerable<string> speakerIds);
+        IEnumerable<Speaker> GetSpeakersById(IEnumerable<int> speakerIds);
     }
 }

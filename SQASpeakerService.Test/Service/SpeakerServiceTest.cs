@@ -23,10 +23,10 @@ namespace SQASpeakerService.Test.Service
         [Fact]
         public void FetchSpeakerDetailsReturnsCorrectSpeakerDetails()
         {
-            var speakerIds = new[] {"1", "2", "3"};
-            var speakerDetails1 = new Speaker("1", "Alexander", "Alexander", "MaibornWolff");
-            var speakerDetails2 = new Speaker("2", "Maik", "Nogens", "MaibornWolff");
-            var speakerDetails3 = new Speaker("3", "Joachim", "Basler", "MaibornWolff");
+            var speakerIds = new[] {1, 2, 3};
+            var speakerDetails1 = new Speaker(1, "Alexander", "Henze", "MaibornWolff");
+            var speakerDetails2 = new Speaker(2, "Maik", "Nogens", "MaibornWolff");
+            var speakerDetails3 = new Speaker(3, "Joachim", "Basler", "MaibornWolff");
             var speakers = new[] {speakerDetails1, speakerDetails2, speakerDetails3};
 
             _speakersRepositoryMock.Setup(mock => mock.GetSpeakersById(speakerIds)).Returns(speakers);

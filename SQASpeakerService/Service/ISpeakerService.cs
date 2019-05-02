@@ -5,6 +5,6 @@ namespace SQASpeakerService.Service
 {
     public interface ISpeakerService
     {
-        IEnumerable<Speaker> FetchSpeakerDetails(IEnumerable<string> speakerIds);
+        IEnumerable<Speaker> FetchSpeakerDetails(IEnumerable<int> speakerIds);
     }
 }

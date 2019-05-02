@@ -21,7 +21,7 @@ namespace SQASpeakerService.Repository
             _collection = database.GetCollection<Speaker>(CollectionName);
         }
         
-        public IEnumerable<Speaker> GetSpeakersById(IEnumerable<string> speakerIds)
+        public IEnumerable<Speaker> GetSpeakersById(IEnumerable<int> speakerIds)
         {
             return _collection.AsQueryable().Where(speaker => Enumerable.Contains(speakerIds, speaker.Id)).ToList();
         }

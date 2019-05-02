@@ -5,18 +5,18 @@ namespace SQASpeakerService.Models
     public class Speaker
     {
         [JsonProperty("id")]
-        public string Id { get; }
+        public int Id { get; set; }
         
         [JsonProperty("name")]
-        public string Name { get; }
+        public string Name { get; set; }
         
-        [JsonProperty("surName")]
-        public string Surname { get; }
+        [JsonProperty("surname")]
+        public string Surname { get; set; }
         
         [JsonProperty("company")]
-        public string Company { get; }
+        public string Company { get; set; }
 
-        public Speaker(string id, string name, string surname, string company)
+        public Speaker(int id, string name, string surname, string company)
         {
             Id = id;
             Name = name;
@@ -26,14 +26,14 @@ namespace SQASpeakerService.Models
 
         private bool Equals(Speaker other)
         {
-            return string.Equals(Id, other.Id) && string.Equals(Name, other.Name) && string.Equals(Surname, other.Surname) && string.Equals(Company, other.Company);
+            return Equals(Id, other.Id) && string.Equals(Name, other.Name) && string.Equals(Surname, other.Surname) && string.Equals(Company, other.Company);
         }
 
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != this.GetType()) return false;
+            if (obj.GetType() != GetType()) return false;
             return Equals((Speaker) obj);
         }
 
@@ -41,7 +41,7 @@ namespace SQASpeakerService.Models
         {
             unchecked
             {
-                var hashCode = (Id != null ? Id.GetHashCode() : 0);
+                var hashCode = Id.GetHashCode();
                 hashCode = (hashCode * 397) ^ (Name != null ? Name.GetHashCode() : 0);
                 hashCode = (hashCode * 397) ^ (Surname != null ? Surname.GetHashCode() : 0);
                 hashCode = (hashCode * 397) ^ (Company != null ? Company.GetHashCode() : 0);

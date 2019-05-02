@@ -21,7 +21,7 @@ namespace SQASpeakerService.Service
         /// </summary>
         /// <param name="speakerIds">The speaker ids</param>
         /// <returns>A list containing all speaker details</returns>
-        public IEnumerable<Speaker> FetchSpeakerDetails(IEnumerable<string> speakerIds)
+        public IEnumerable<Speaker> FetchSpeakerDetails(IEnumerable<int> speakerIds)
         {
             return _speakersRepository.GetSpeakersById(speakerIds);
         }

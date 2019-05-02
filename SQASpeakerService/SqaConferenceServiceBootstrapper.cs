@@ -2,6 +2,7 @@ using Nancy;
 using Nancy.Bootstrapper;
 using Nancy.Configuration;
 using Nancy.TinyIoc;
+using Newtonsoft.Json;
 
 namespace SQASpeakerService
 {
@@ -16,7 +17,7 @@ namespace SQASpeakerService
             var config = new TraceConfiguration(true, true);
             environment.AddValue(config);
         }
-        
+
         protected override void RequestStartup(TinyIoCContainer container, IPipelines pipelines, NancyContext context)
         {
             pipelines.AfterRequest.AddItemToEndOfPipeline(ctx =>

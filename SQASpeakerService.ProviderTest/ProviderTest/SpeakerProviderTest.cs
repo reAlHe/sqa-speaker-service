@@ -10,7 +10,7 @@ using Xunit.Abstractions;
 
 namespace SQASpeakerService.ProviderTest.ProviderTest
 {
-    public class PricingProviderTest : IDisposable
+    public class SpeakerProviderTest : IDisposable
     {
         private string PactBrokerUrl { get; }
 
@@ -28,7 +28,7 @@ namespace SQASpeakerService.ProviderTest.ProviderTest
 
         private const string ProviderUrl = "http://localhost:5000";
 
-        public PricingProviderTest(ITestOutputHelper output)
+        public SpeakerProviderTest(ITestOutputHelper output)
         {
             OutputHelper = output;
             PactVerifierConfig = new PactVerifierConfig {

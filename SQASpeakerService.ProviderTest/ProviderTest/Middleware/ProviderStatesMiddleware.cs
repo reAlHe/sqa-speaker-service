@@ -27,7 +27,7 @@ namespace SQASpeakerService.ProviderTest.ProviderTest.Middleware
                     PrepareSpeakersDatabase
                 }
             };
-            ConsumerName = "loop-energyprofile";
+            ConsumerName = "sqa-conference-service";
             ResetMethod = ResetEnvironment;
         }
 
@@ -36,9 +36,9 @@ namespace SQASpeakerService.ProviderTest.ProviderTest.Middleware
         /// </summary>
         private void PrepareSpeakersDatabase()
         {
-            var speaker1 = new Speaker("1", "Alexander", "Henze", "MaibornWolff");
-            var speaker2 = new Speaker("2", "Maik", "Nogens", "MaibornWolff");
-            var speaker3 = new Speaker("3", "Joachim", "Basler", "MaibornWolff");
+            var speaker1 = new Speaker(1, "Alexander", "Henze", "MaibornWolff");
+            var speaker2 = new Speaker(2, "Maik", "Nogens", "MaibornWolff");
+            var speaker3 = new Speaker(3, "Joachim", "Basler", "MaibornWolff");
 
             var collection = _database.GetCollection<Speaker>(CollectionName);
             
