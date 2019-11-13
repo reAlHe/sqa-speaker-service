@@ -54,15 +54,6 @@ namespace SQASpeakerService.ProviderTest.ProviderTest
             const string consumerServiceName = "sqa-conference-service";
 
             var pactUrl = string.Format(PactUrlTemplate, consumerServiceName);
-
-            IPactVerifier pactVerifier = new PactVerifier(PactVerifierConfig);
-
-            pactVerifier
-                .ProviderState($"{PactMiddlewareServiceUrl}/provider-states")
-                .ServiceProvider(ProviderName, ProviderUrl)
-                .HonoursPactWith(consumerServiceName)
-                .PactUri($"{PactBrokerUrl}{pactUrl}")
-                .Verify(providerState: "There are speakers details available for speakers with id 1, 2 and 3");
         }
 
         public void Dispose()
